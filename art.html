@@ -6,20 +6,116 @@
     <link href="style.css" rel="stylesheet" type="text/css" />
     <style>
       /* Styling Only Related To THIS Page */
-      .parent-flex {
+       .parent-flex {
         display: flex;
-        background-color: rgb(51, 112, 26);
+        background-color: rgb(96, 142, 81);
+        align-items: center;
         justify-content: space-around;
-        padding: 10px;
-        margin-bottom: 20px;
+        margin-bottom: 50px;
       }
 
-      img {
-        max-width: 30%;
-        border-radius: 10px;
-        object-fit: contain;
-        background-color: white;
+      .parent-flex img {
+        width: 150px;
+        padding: 20px;
       }
+      .child-flex p {
+        background-color: rgb(254, 254, 149);
+        padding: 20px;
+        margin: 20px;
+      }
+       /* Styling Only Related To THIS Page */
+      #horizontal-photo-div {
+        display: flex;
+        justify-content: center;
+        align-content: space-around;
+        flex-wrap: wrap;
+      }
+
+      #horizontal-photo-div img {
+        height: 380px;
+        width: 550px;
+        object-fit: cover;
+        margin: 20px;
+        opacity: 1;
+      }
+
+
+      #vertical-photo-div {
+        display: flex;
+        justify-content: center;
+        align-content: space-around;
+        flex-wrap: wrap;
+      }
+
+      #vertical-photo-div img {
+        width: 350px;
+        height: 500px;
+        object-fit: cover;
+        margin: 20px;
+        opacity: 1;
+      }
+
+      #vertical-photo-div img:hover {
+        opacity: 0.4;
+      }
+      
+/* horizontal photos */
+      .image {
+        position:relative;
+        height: 380px;
+        width: 550px;
+        object-fit: cover;
+        margin: 20px;
+        
+      }
+      
+      .image-img {
+        display: block;
+        width: 100%;
+      }
+      
+      .image-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        margin: 20px;
+        background: rgba(0, 0, 0, 0.6);
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: opacity 0.25s;
+      }
+      
+      .image-overlay:hover {
+        opacity: 1;
+      }
+      
+      .image-location {
+        font-size: 2em;
+        font-weight: bold;
+        text-align: center;
+      }
+      
+      .image-camera {
+        font-size: 1.2em;
+        margin-top: 0.25em;
+        text-align: center;
+      }
+/* vertical photos */
+      .image-v {
+        position:relative;
+        width: 350px;
+        height: 500px;
+        object-fit: cover;
+        margin: 20px;
+        
+      }
+      
     </style>
   </head>
   <body>
@@ -45,24 +141,136 @@
       </li>
     </ul>
     <!-- ⬇⬇⬇⬇⬇⬇ Main Page Content -->
-    <h1>My Art</h1>
+    <h1>Digital Media</h1>
 
-    <div class="parent-flex">
-      <img
-        src="images/HeartIcons.jpeg"
-      />
-      <img
-        src="images/VibeyTunes.png"
-      />
-    </div>
+ <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a class="active"href="aboutme.html">Paintings</a></li>
+      <li><a href="art.html">Digital Media</a></li>
+      <li><a href="resume.html">Instagram</a></li>
+      <li style="float: right">
+        <a target="_blank" href=""
+          ><img
+            src="https://www.getfocused.no/wp-content/uploads/2022/09/White-YouTube-Logo-Transparent.png"
+            style="width: 25px; margin: -5px"
+        /></a>
+      </li>
+      <li style="float: right">
+        <a target="_blank" href=""
+          ><img
+            src="https://img.icons8.com/win10/512/FFFFFF/instagram-new.png"
+            style="width: 25px; margin: -5px"
+        /></a>
+      </li>
+    </ul>
+    <!-- ⬇⬇⬇⬇⬇⬇ Main Page Content -->
+    
 
-    <div class="parent-flex">
-      <img
-        src="images/VibeyTunes.png"
+       <div id="vertical-photo-div">
+      <div class="image-v">
+        <img
+        src="masha.jpg"  
+             class="image-img"
       />
-      <img
-        src="images/HeartIcons.jpeg"
+        <div class="image-overlay">
+          <div class="image-location">
+            Masha and Anna<br>2025
+          </div>
+          <p class="image-camera">
+            Adobe Photoshop
+          </p>
+        </div>
+      </div>
+
+      <div id="vertical-photo-div">
+      <div class="image-v">
+        <img
+        src="waterfall.png"  
+             class="image-img"
       />
-    </div>
+        <div class="image-overlay">
+          <div class="image-location">
+           National Park Service<br>2025
+          </div>
+          <p class="image-camera">
+            Adobe Illustrator
+          </p>
+        </div>
+      </div>
+
+<div id="vertical-photo-div">
+      <div class="image-v">
+        <img
+        src="athena.png"  
+             class="image-img"
+      />
+        <div class="image-overlay">
+          <div class="image-location">
+           Athena<br>2026
+          </div>
+          <p class="image-camera">
+            Adobe Illustrator
+          </p>
+        </div>
+      </div>
+
+<div id="vertical-photo-div">
+      <div class="image-v">
+        <img
+        src="bears.png"  
+             class="image-img"
+      />
+        <div class="image-overlay">
+          <div class="image-location">
+            Bears Zine<br>2026
+          </div>
+          <p class="image-camera">
+            Adobe Photoshop and Adobe InDesign
+          </p>
+        </div>
+      </div>
+
+
+<div id="vertical-photo-div">
+      <div class="image-v">
+        <img
+        src="candles.png"  
+             class="image-img"
+      />
+        <div class="image-overlay">
+          <div class="image-location">
+            Candles<br>2025
+          </div>
+          <p class="image-camera">
+            Adobe Photoshop
+          </p>
+        </div>
+      </div>
+
+
+<div id="vertical-photo-div">
+      <div class="image-v">
+        <img
+        src="Grandparents.png"  
+             class="image-img"
+      />
+        <div class="image-overlay">
+          <div class="image-location">
+            Grandparents<br>2025
+          </div>
+          <p class="image-camera">
+            Adobe Photoshop and Photographs
+          </p>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
   </body>
 </html>
